@@ -1,4 +1,4 @@
-# Debian on a WD My Cloud Home
+# WIP: Debian on a WD My Cloud Home
 Instructions and scripts to install Debian on a WD My Cloud Home NAS
 
 ## Motivation
