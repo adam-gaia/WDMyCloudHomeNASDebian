@@ -46,9 +46,9 @@ sudo dd status=progress if=/dev/zero of=/dev/sdb bs=4k && sync
 # Partition the drive
 sudo fdisk /dev/sdb
 o # create partition table
+n # create a new partition
 t # set the partition type
-b # this should corespond to the `W95 FAT32` hex code
-n # add a new partition
+b # as in 0x0b. This should corespond to the `W95 FAT32` hex code
 
 w # Write and save chages
 # This will end the fdisk session
