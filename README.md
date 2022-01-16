@@ -73,7 +73,10 @@ This is the black magic. I dont know how the OG Forth32 found out that we can lo
 * Plug in the usb flash drive
 * Hold down the reset button. A ballpoint pen wasnt skinny enough to press the reset button. I found it easiest to remove the cover to gain access to the button
 * While keeping the reset button held down, plug the power supply back in
-* Keep the reset button held down until the light blinks steadily. 
+* Keep the reset button held down until the light blinks steadily.
+
+### Find the ip of the WD
+`sudo nmap -sP 172.16.0.0/24`
 
 ### Run setup process
 See https://nerdprojekte.wordpress.com/2021/12/28/wd-mycloud-home-to-linux-server-17-install-openmediavault-6-and-debian-11-directly-new-method/
