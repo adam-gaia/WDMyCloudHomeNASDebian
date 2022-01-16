@@ -134,17 +134,27 @@ umount /mnt/proc/
 umount /mnt/sys/
 umount /mnt/dev/
 
+# Mount your flash drive so we can write back to it
+mkdir -p /media/usb-drive
+# Find the flash drive
+lsblk
+...
+# My device was /dev/sdb1
+mount /dev/sdb1 /media/usb-drive/
+mkdir /media/usb-drive/new
+
 # Save the image for use later
 mkdir /new
 mv /mnt/usr /new/
 mv /mnt/var /new/
 mkdir /mnt/usr /mnt/var
 cd /mnt
-tar --create --gzip --file /root/20-root.tar.gz 
+# Creating these archives will take a while
+tar --create --gzip --file /media/usb-drive/new/20-root.tar.gz *
 cd /new/var
-tar --create --gzip --file /root/21-var.tar.gz *
+tar --create --gzip --file /media/usb-drive/new/21-var.tar.gz *
 cd /new/usr
-tar --create --gzip --file /root/22-usr.tar.gz *
+tar --create --gzip --file /media/usb-drive/new/22-usr.tar.gz *
 
 ```
 
